@@ -1,16 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Aboutttttttt
+     Grupos Mundial
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
-    <h1>adasdasdasd</h1>
+    
+    
+    <h3>Consulta traer todo lo que esta en grupos TABLA BASE COMPLETA</h3>
+    <!-- Ejemplo traer todos los team completos (traer todos los OBJETOS dentro de "Grupos"-->
     <ion-item class="text" *ngFor="let item of items | async">
 			{{item | json}}
 		</ion-item>
     
+    <h3>Consulta ver todos los team row 0 de cada grupo</h3>
+    
+    <!-- Ejemplo traer los puntos de los equipos en el row 0 -->
+    <ion-item class="text" *ngFor="let item of items | async">
+			{{item [0].puntos | json}}
+		</ion-item>
+    
+     
 </ion-content>
