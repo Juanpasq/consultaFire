@@ -17,10 +17,18 @@
     
     <h3>Consulta ver todos los team row 0 de cada grupo</h3>
     
+    
     <!-- Ejemplo traer los puntos de los equipos en el row 0 -->
     <ion-item class="text" *ngFor="let item of items | async">
-			{{item [0].puntos | json}}
+			{{item[0].icono | json}}
 		</ion-item>
     
+    <h3>Consulta ver 2 propiedades del mismo objeto</h3>
+    
+    
+    <!-- Ejemplo traer los puntos de los equipos en el row 0 -->
+    <ion-item class="text" *ngFor="let item of items | async">
+			ID: {{item[0].id | json}}, EQUIPO: {{item[0].equipo | json}}
+    </ion-item>
      
 </ion-content>
