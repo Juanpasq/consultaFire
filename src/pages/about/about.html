@@ -8,14 +8,13 @@
 
 <ion-content padding>
     
-    
-    <h3>Consulta traer todo lo que esta en grupos TABLA BASE COMPLETA</h3>
+        <h3>Consulta traer todo lo que esta en grupos TABLA BASE COMPLETA</h3>
     <!-- Ejemplo traer todos los team completos (traer todos los OBJETOS dentro de "Grupos"-->
     <ion-item class="text" *ngFor="let item of items | async">
 			{{item | json}}
 		</ion-item>
     
-    <h3>Consulta ver todos los team row 0 de cada grupo</h3>
+    <h3>Consulta ver la propiedad "icono" de los team row 0 de cada grupo</h3>
     
     
     <!-- Ejemplo traer los puntos de los equipos en el row 0 -->
@@ -28,7 +27,7 @@
     
     <!-- Ejemplo traer los puntos de los equipos en el row 0 -->
     <ion-item class="text" *ngFor="let item of items | async">
-			ID: {{item[0].id | json}}, EQUIPO: {{item[0].equipo | json}}
+			ID: {{item[0].id | json}} - EQUIPO: {{item[0].equipo | json}}
     </ion-item>
      
 </ion-content>
